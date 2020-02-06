@@ -1,16 +1,11 @@
 pipeline {
     agent none
     stages {
-        stage('build') {
-            steps {
-					node{
 
-	dir("Test1"){
-    		sh start.sh
-	}
-               docker ps
-            }
+        stage('Build2') {
+            steps {
+               echo "hello world"
+            }    
         }
     }
-	}
 }
