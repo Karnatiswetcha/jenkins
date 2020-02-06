@@ -1,10 +1,12 @@
 pipeline {
-    agent none
+    
     stages {
         stage('build') {
             steps {
-			sh start.sh
-			docker ps
+	dir("Test1"){
+    		sh start.sh
+	}
+                sh 'npm --version'
             }
         }
     }
