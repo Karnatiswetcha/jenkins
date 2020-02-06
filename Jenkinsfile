@@ -1,13 +1,15 @@
 pipeline {
     agent none
+node{
     stages {
         stage('build') {
             steps {
 	dir("Test1"){
-    		start.sh
+    		sh start.sh
 	}
-                docker ps
+               docker ps
             }
         }
     }
+	}
 }
