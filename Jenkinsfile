@@ -1,7 +1,7 @@
 pipeline {
     agent none
-node{
     stages {
+	node{
         stage('build') {
             steps {
 	dir("Test1"){
