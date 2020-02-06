@@ -1,8 +1,11 @@
 pipeline {
-    agent { docker { image 'node:6.3' } }
+    
     stages {
         stage('build') {
             steps {
+	dir("C:\Program Files\Docker Toolbox"){
+    		sh start.sh
+	}
                 sh 'npm --version'
             }
         }
