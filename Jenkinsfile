@@ -2,8 +2,9 @@ pipeline {
     agent none
     stages {
         stage('build') {
-		node{
             steps {
+					node{
+
 	dir("Test1"){
     		sh start.sh
 	}
