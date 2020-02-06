@@ -4,9 +4,9 @@ pipeline {
         stage('build') {
             steps {
 	dir("Test1"){
-    		sh start.sh
+    		start.sh
 	}
-                sh 'npm --version'
+                docker ps
             }
         }
     }
